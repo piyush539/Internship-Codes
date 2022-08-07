@@ -1,0 +1,15 @@
+Number of Zero-Filled Subarrays
+
+
+
+class Solution:
+    def zeroFilledSubarray(self, nums: List[int]) -> int:
+        r,c=0,0
+        for i in nums:
+            if i==0:
+                c+=1
+            else:
+                r+=((c**2)+c)//2
+                c=0
+        r+=((c**2)+c)//2
+        return r
