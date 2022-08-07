@@ -1,0 +1,13 @@
+button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid red;
+    background-color: yellow;
+    color: blue;
+    box-shadow: 1px 1px 1px blue;
+    border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
