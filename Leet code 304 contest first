@@ -1,0 +1,22 @@
+Best Poker Hand
+
+class Solution:
+    def bestHand(self, ranks: List[int], suits: List[str]) -> str:
+        if len(set(suits))==1:
+            return "Flush"
+        else:
+            x=set(ranks)
+            hasil=[] 
+            for i in x:
+                if ranks.count(i)>=3:
+                    hasil.append(3) 
+                elif ranks.count(i)==2:
+                    hasil.append(2)
+                else:
+                    hasil.append(1) 
+            if max(hasil)==3:
+                return "Three of a Kind"
+            elif max(hasil)==2:
+                return "Pair"
+            else:
+                return "High Card"
